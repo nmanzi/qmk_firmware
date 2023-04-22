@@ -63,17 +63,36 @@
 
 #ifdef RGB_MATRIX_ENABLE
 
+/*
+The first part, // Key Matrix to LED Index, tells the system what key this LED represents by using the key's electrical matrix row & col.
+The second part, // LED Index to Physical Position represents the LED's physical { x, y } position on the keyboard.
+The default expected range of values for { x, y } is the inclusive range { 0..224, 0..64 }.
+This default expected range is due to effects that calculate the center of the keyboard for their animations.
+The easiest way to calculate these positions is imagine your keyboard is a grid, and the top left of the keyboard represents { x, y }
+coordinate { 0, 0 } and the bottom right of your keyboard represents { 224, 64 }.
+
+Using this as a basis, you can use the following formula to calculate the physical position:
+
+x = 224 / (NUMBER_OF_COLS - 1) * COL_POSITION
+y =  64 / (NUMBER_OF_ROWS - 1) * ROW_POSITION
+
+Where NUMBER_OF_COLS, NUMBER_OF_ROWS, COL_POSITION, & ROW_POSITION are all based on the physical layout of your keyboard, not the electrical layout.
+*/
+
 #define NA NO_LED
 
 /* RGB Positioning */
 led_config_t g_led_config = { {
+    // Key Matrix to LED Index
     { 0, 1, 2, 3 },
     { NO_LED, NO_LED, NO_LED, NO_LED },
     { NO_LED, NO_LED, NO_LED, NO_LED },
     { NO_LED, NO_LED, NO_LED, NO_LED },
 }, {
+    // LED Index to Physical Position
     { 0,  0 }, { 74,  0 }, { 148,  0 }, { 224, 0 }
 }, {
+    // LED Index to Flag
     4, 4, 4, 4
 } };
 

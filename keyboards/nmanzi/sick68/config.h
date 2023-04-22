@@ -27,12 +27,35 @@
 #define RP2040_BOOTLOADER_DOUBLE_TAP_RESET_LED GP13
 #define RP2040_BOOTLOADER_DOUBLE_TAP_RESET_TIMEOUT 500U
 
+/*
+ * Keyboard Matrix Assignments
+ *
+ * Change this to how you wired your keyboard
+ * COLS: AVR pins used for columns, left to right
+ * ROWS: AVR pins used for rows, top to bottom
+ * DIODE_DIRECTION: COL2ROW = COL = Anode (+), ROW = Cathode (-, marked on diode)
+ *                  ROW2COL = ROW = Anode (+), COL = Cathode (-, marked on diode)
+ *
+ */
+#define MATRIX_ROW_PINS \
+    { D3, D2, D1, D0, D4 }
+#define MATRIX_COL_PINS \
+    { C6, D7, E6, B4, B5, B0, D5, B6, B2, B3, B1, F7, F6, F5, F4 }
+
+/* COL2ROW, ROW2COL*/
+#define DIODE_DIRECTION COL2ROW
+
+/* Mechanical locking support. Use KC_LCAP, KC_LNUM or KC_LSCR instead in keymap */
+#define LOCKING_SUPPORT_ENABLE
+/* Locking resynchronize hack */
+#define LOCKING_RESYNC_ENABLE
+
 #ifdef RGB_MATRIX_ENABLE
 
      /* RGB Defines */
 #    define RGB_DI_PIN GP21
-#    define RGB_MATRIX_LED_COUNT 5
-#    define RGBLED_NUM 5
+#    define RGB_MATRIX_LED_COUNT 35
+#    define RGBLED_NUM 35
 
      /* Enable Framebuffer and keypress effects */
 #    define RGB_MATRIX_FRAMEBUFFER_EFFECTS

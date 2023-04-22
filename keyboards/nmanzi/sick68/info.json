@@ -9,26 +9,10 @@
         "device_version": "0.0.1"
     },
     "bootmagic": {
-        "enabled": true,
         "matrix": [0, 0]
     },
     "processor": "RP2040",
     "bootloader": "rp2040",
-    "matrix_pins": {
-        "cols": [
-            "GP3",
-            "GP2",
-            "GP1",
-            "GP0"
-        ],
-        "rows": [
-            "GP4",
-            "GP5",
-            "GP6",
-            "GP7"
-        ]
-    },
-    "diode_direction": "COL2ROW",
     "layouts": {
         "LAYOUT_65_ansi": {
             "layout": [
