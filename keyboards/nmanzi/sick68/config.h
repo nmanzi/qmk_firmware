@@ -24,7 +24,7 @@
 
 /* Double tap the side button to enter bootloader */
 #define RP2040_BOOTLOADER_DOUBLE_TAP_RESET
-#define RP2040_BOOTLOADER_DOUBLE_TAP_RESET_LED GP13
+#define RP2040_BOOTLOADER_DOUBLE_TAP_RESET_LED GP4
 #define RP2040_BOOTLOADER_DOUBLE_TAP_RESET_TIMEOUT 500U
 
 /*
@@ -38,9 +38,9 @@
  *
  */
 #define MATRIX_ROW_PINS \
-    { D3, D2, D1, D0, D4 }
+    { GP6, GP7, GP8, GP9, GP10 }
 #define MATRIX_COL_PINS \
-    { C6, D7, E6, B4, B5, B0, D5, B6, B2, B3, B1, F7, F6, F5, F4 }
+    { GP11, GP12, GP13, GP14, GP15, GP16, GP17, GP18, GP19, GP20, GP21, GP22, GP26, GP27, GP28 }
 
 /* COL2ROW, ROW2COL*/
 #define DIODE_DIRECTION COL2ROW
@@ -53,7 +53,7 @@
 #ifdef RGB_MATRIX_ENABLE
 
      /* RGB Defines */
-#    define RGB_DI_PIN GP21
+#    define RGB_DI_PIN GP5
 #    define RGB_MATRIX_LED_COUNT 35
 #    define RGBLED_NUM 35
 

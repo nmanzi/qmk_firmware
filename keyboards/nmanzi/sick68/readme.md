@@ -1,4 +1,4 @@
-# SiCK-68
+# SiCK-68 for RP2040
 
 ![sick68](https://cdn.thingiverse.com/renders/f2/af/c2/ce/e6/11b1601df06621e69068389e4fb0d943_preview_featured.JPG)
 
@@ -17,9 +17,15 @@ Make example for this keyboard (after setting up your build environment):
 
 See the [build environment setup](https://docs.qmk.fm/#/getting_started_build_tools) and the [make instructions](https://docs.qmk.fm/#/getting_started_make_guide) for more information. Brand new to QMK? Start with our [Complete Newbs Guide](https://docs.qmk.fm/#/newbs).
 
+## Wiring
+### Key Wiring
+![Key Wiring](https://imgur.com/a0wZH4A.png)
+
+### RP2040 Wiring
+![Wiring Diagram](https://imgur.com/SdaRIy6.png)
+
 ## Todo List
 - Map out the RGB Matrix properly
-- Draw wiring diagram and update pinmap
 
 ## Thanks
 This borrows heavily from the great work done by [umbynos](https://github.com/umbynos) on the handwired/sick68 firmware.
